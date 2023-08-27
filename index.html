@@ -8,17 +8,26 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="head"><p class="head-text">Etch a Sketch</p></div>
-    <div class="container"><div class="container-box"></div></div>
-
-    <div class="toolbox">
+    <div class="main-container">
+        <div class="head"><p class="head-text">Etch a Sketch</p></div>
+        <div class="container"><div class="container-box"></div></div>
         <div class="tools">
-            <ul class="toolmenu">
-                <li><input type = "color" class="color"></li>
-                <li><button role="button">Write</button></li>
-                <li><button role="button" class="erase">Erase</button></li>
-                <li><button role="button">Clear</button></li>
-            </ul>
+            <div class="toolbox">
+                <div class="toolmenu">
+                    <div class="color-palette">
+                        <div>Change Color -></div>
+                        <div><input type = "color" class="color"></div>
+                    </div>
+                </div>
+                <div class="options">
+                    <button role="button" class="write">Write</button>
+                    <button role="button" class="erase">Erase</button>
+                    <button role="button" class="clear" onclick="resetboard()">Clear</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            @Copyright 2023 @Pranav
         </div>
     </div>
 </body>
