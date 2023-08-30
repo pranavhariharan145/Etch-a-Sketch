@@ -1,7 +1,9 @@
+// Initializing Board arrangements
 let size = 16
 let board = document.querySelector(".container-box");
 board.style.gridTemplateColumns = `repeat(16, 1fr)`;
 board.style.gridTemplateRows = `repeat(16, 1fr)`;
+// Creating 16x16 div initially
 for(let i = 0; i < 256; i++)
 {
     let squares = document.createElement('div')
@@ -13,6 +15,7 @@ for(let i = 0; i < 256; i++)
     }
     )
 }
+// Function that works to change number of elemetns present in width of the board
 
 function chwidth()
 {
@@ -40,6 +43,7 @@ function chwidth()
         
     })
 }
+// Function that makes user to erase 
 function eraser()
 {
     let erase = document.querySelector(".erase")
@@ -48,6 +52,7 @@ function eraser()
         color = "white"
     })
 }
+// Color changes dynamically according to user's selection
 function changecol(){
     let col = document.querySelector(".color");
     col.addEventListener("input" ,function(c){
@@ -56,6 +61,7 @@ function changecol(){
     }
     );
 }
+// Allows user to write on board after erasing(Colors white)
 function write()
 {
     let write = document.querySelector(".write")
@@ -64,6 +70,7 @@ function write()
         document.querySelector(".color-palette").style.backgroundColor = "black";
     })
 }
+// Resets the board by coloring white in background
 function resetboard()
 {
     const clear = document.querySelector('.clear')
@@ -84,6 +91,8 @@ function all()
     resetboard()
     chwidth()
 }
+// Global variable color passes into functions and helps user to change color
+// Default color is set to black
 let color = "black"
 all()
 
